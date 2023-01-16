@@ -1,0 +1,12 @@
+function fetchNASDAQ() {
+  const url = "https://www.nasdaq.com/api/v1/forex";
+  return fetch(url)
+    .then(response => response.json())
+    .then(data => data.forex);
+}
+
+
+This function takes no arguments, and returns the current value of the NASDAQ currency as a promise. The fetch() method is used to get the currency data from the specified URL and the response.json() method is used to parse the response as a JSON object. The data.forex is used to access the currency value from the JSON object.
+
+You can use this function like this:
+fetchNASDAQ().then(console.log)
